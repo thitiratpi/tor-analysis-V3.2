@@ -1,0 +1,195 @@
+# ================================================================================
+# 🎨 STREAMLIT UI CONFIGURATION FILE (config.toml)
+# ================================================================================
+#
+# 📍 Location: .streamlit/config.toml
+#
+# 🎯 Purpose: กำหนดการตั้งค่าหน้าตาและพฤติกรรมของแอพ Streamlit
+#
+# ⚠️ Important: 
+# - ไฟล์นี้จะถูกอ่านตอน start app
+# - สามารถ commit ลง Git ได้ (ไม่มีข้อมูลลับ)
+# - ใช้ร่วมกันได้ทั้งทีม
+#
+# ================================================================================
+
+# ────────────────────────────────────────────────────────────────────────────────
+# 🎨 THEME SETTINGS (การตั้งค่าสีและธีม)
+# ────────────────────────────────────────────────────────────────────────────────
+[theme]
+
+# สีหลัก (ปุ่ม, link, highlights)
+# ค่าเริ่มต้น: #FF4B4B (แดง Streamlit)
+# ตัวอย่าง: "#667eea" (ม่วงน้ำเงิน), "#1E88E5" (น้ำเงิน)
+primaryColor = "#667eea"
+
+# สีพื้นหลัง (หน้าจอหลัก)
+# ค่าเริ่มต้น: #FFFFFF (ขาว)
+# ตัวอย่าง: "#f0f2f6" (เทาอ่อน)
+backgroundColor = "#f0f2f6"
+
+# สีพื้นหลังส่วนรอง (sidebar, widgets)
+# ค่าเริ่มต้น: #F0F2F6 (เทาอ่อน)
+# ตัวอย่าง: "#ffffff" (ขาว)
+secondaryBackgroundColor = "#ffffff"
+
+# สีข้อความ (ตัวหนังสือ)
+# ค่าเริ่มต้น: #262730 (เทาเข้ม)
+# ตัวอย่าง: "#262730" (เกือบดำ)
+textColor = "#262730"
+
+# Font ที่ใช้
+# ค่าเริ่มต้น: "sans serif"
+# ตัวอย่าง: "sans serif", "serif", "monospace"
+font = "sans serif"
+
+
+# ────────────────────────────────────────────────────────────────────────────────
+# 📂 SERVER SETTINGS (การตั้งค่าเซิร์ฟเวอร์)
+# ────────────────────────────────────────────────────────────────────────────────
+[server]
+
+# พอร์ตที่แอพจะทำงาน
+# ค่าเริ่มต้น: 8501
+# ใช้เมื่อ: รัน local (streamlit run app.py)
+port = 8501
+
+# ขนาดไฟล์สูงสุดที่อัปโหลดได้ (MB)
+# ค่าเริ่มต้น: 200MB
+# แนะนำ: 200 สำหรับ TOR files, 500 สำหรับไฟล์ใหญ่มาก
+maxUploadSize = 200
+
+# อนุญาตให้เชื่อมต่อจากที่อื่นได้หรือไม่
+# ค่าเริ่มต้น: false (เฉพาะ localhost)
+# ตั้งเป็น true: เปิดให้คนอื่นเข้าได้ (สำหรับ deploy)
+headless = true
+
+# เปิด CORS (Cross-Origin Resource Sharing)
+# ค่าเริ่มต้น: true
+# ปิด (false): เพิ่มความปลอดภัย
+enableCORS = false
+
+# เปิด XSRF protection
+# ค่าเริ่มต้น: true
+# ควรเปิดไว้เสมอเพื่อความปลอดภัย
+enableXsrfProtection = true
+
+
+# ────────────────────────────────────────────────────────────────────────────────
+# 🌐 BROWSER SETTINGS (การตั้งค่าเบราว์เซอร์)
+# ────────────────────────────────────────────────────────────────────────────────
+[browser]
+
+# เปิดเบราว์เซอร์อัตโนมัติเมื่อ start
+# ค่าเริ่มต้น: true
+# ตั้งเป็น false: สำหรับ production (ไม่ต้องเปิดเบราว์เซอร์)
+gatherUsageStats = false
+
+# แสดง address ที่เชื่อมต่อ
+# ค่าเริ่มต้น: localhost
+serverAddress = "localhost"
+
+
+# ────────────────────────────────────────────────────────────────────────────────
+# 🔄 RUNNER SETTINGS (การทำงานของแอพ)
+# ────────────────────────────────────────────────────────────────────────────────
+[runner]
+
+# Magic commands (เขียน variable แล้วแสดงผลอัตโนมัติ)
+# ค่าเริ่มต้น: true
+# ปิด (false): ใช้ st.write() แทน (แนะนำสำหรับ production)
+magicEnabled = false
+
+# เมื่อ rerun ให้ลบ cache หรือไม่
+# ค่าเริ่มต้น: false
+# true: ลบ cache ทุกครั้ง (ช้ากว่า แต่ไม่มีปัญหา stale data)
+fastReruns = true
+
+
+# ────────────────────────────────────────────────────────────────────────────────
+# 📊 CLIENT SETTINGS (การตั้งค่าด้าน client)
+# ────────────────────────────────────────────────────────────────────────────────
+[client]
+
+# แสดงปุ่ม Deploy
+# ค่าเริ่มต้น: true
+# ปิด (false): ไม่แสดงปุ่ม (สำหรับ production)
+showErrorDetails = true
+
+# Toolbar mode
+# ค่าเริ่มต้น: "auto"
+# ตัวอย่าง: "auto", "developer", "viewer", "minimal"
+toolbarMode = "minimal"
+
+
+# ================================================================================
+# 📝 EXAMPLE VALUES (ตัวอย่างค่าที่ใช้ได้)
+# ================================================================================
+#
+# 🎨 THEMES ยอดนิยม:
+#
+# 1. Purple Gradient (ที่ใช้อยู่)
+#    primaryColor = "#667eea"
+#    backgroundColor = "#f0f2f6"
+#
+# 2. Blue Professional
+#    primaryColor = "#1E88E5"
+#    backgroundColor = "#ffffff"
+#
+# 3. Green Fresh
+#    primaryColor = "#43A047"
+#    backgroundColor = "#f5f5f5"
+#
+# 4. Red Bold
+#    primaryColor = "#FF4B4B"
+#    backgroundColor = "#ffffff"
+#
+# 5. Dark Mode
+#    primaryColor = "#64B5F6"
+#    backgroundColor = "#0e1117"
+#    secondaryBackgroundColor = "#262730"
+#    textColor = "#fafafa"
+#
+# ────────────────────────────────────────────────────────────────────────────────
+#
+# 📂 FILE SIZE LIMITS:
+#
+# Small files (< 10MB):   maxUploadSize = 10
+# Medium files (< 50MB):  maxUploadSize = 50
+# Large files (< 200MB):  maxUploadSize = 200
+# Very large (< 500MB):   maxUploadSize = 500
+#
+# ⚠️ หมายเหตุ: ยิ่งใหญ่ยิ่งใช้ memory มาก
+#
+# ────────────────────────────────────────────────────────────────────────────────
+#
+# 🔒 SECURITY BEST PRACTICES:
+#
+# Production settings:
+# - enableCORS = false
+# - enableXsrfProtection = true
+# - showErrorDetails = false (ซ่อน error จาก user)
+# - gatherUsageStats = false
+# - toolbarMode = "minimal"
+#
+# Development settings:
+# - showErrorDetails = true (แสดง error เพื่อ debug)
+# - gatherUsageStats = true
+# - toolbarMode = "developer"
+#
+# ================================================================================
+#
+# 🚀 HOW TO USE:
+#
+# 1. Local Development:
+#    streamlit run app.py
+#    (อ่านค่าจากไฟล์นี้อัตโนมัติ)
+#
+# 2. Streamlit Cloud:
+#    - Upload ไฟล์นี้พร้อมกับ app.py
+#    - Settings จะถูกใช้อัตโนมัติ
+#
+# 3. Docker:
+#    COPY .streamlit/config.toml /app/.streamlit/config.toml
+#
+# ================================================================================
