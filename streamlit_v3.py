@@ -1129,18 +1129,17 @@ def main():
     with st.sidebar:
         st.markdown("### ⚙️ Configuration")
 
-        gemini_api_key = st.text_input(
-            "Gemini API Key",
-            type="password",
-            value=st.secrets.get("GEMINI_API_KEY", ""),
-            help="Enter your Gemini API key"
-        )
-
+        # Read API key from secrets (not shown to user)
+        gemini_api_key = st.secrets.get("GEMINI_API_KEY", "")
+        
+        # Show connection status only
         if gemini_api_key:
             if validate_gemini_api(gemini_api_key):
-                st.success("✅ API key valid")
+                st.success("✅ API Connected")
             else:
-                st.error("❌ Invalid API key")
+                st.warning("⚠️ API Configuration Required")
+        else:
+            st.warning("⚠️ API Configuration Required")
 
         st.markdown("---")
         st.markdown("### 📋 About")
