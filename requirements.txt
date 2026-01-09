@@ -10,3 +10,4 @@ requests
 xlsxwriter
 openpyxl
 plotly
+oauth2client
