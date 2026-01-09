@@ -6,8 +6,8 @@ oauth2client
 requests
 python-docx
 pdfplumber
-sentence-transformers>=3.0.0
-scikit-learn>=1.5.0
+sentence-transformers
+scikit-learn
 xlsxwriter
 openpyxl
 PyYAML
